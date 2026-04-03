@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>People Search</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+<div id="container">
+
+<header>
+<h1>People Search</h1>
+<button id="reset">Reset</button>
+
+<ul class="nav">
+<li><a href="index.html">Home</a></li>
+<li><a href="people.html">People search</a></li>
+<li><a href="vehicle.html">Vehicle search</a></li>
+<li><a href="add-vehicle.html">Add a vehicle</a></li>
+</ul>
+</header>
+
+<main>
+
+<form id="searchForm">
+<label for="name">Name:</label>
+<input id="name" type="text">
+
+<label for="license">License:</label>
+<input id="license" type="text">
+
+<button type="submit">Submit</button>
+</form>
+
+<div id="message"></div>
+<div id="results"></div>
+
+</main>
+
+<aside>
+<img src="images/user.jpg" alt="people illustration">
+</aside>
+
+<!-- <footer>
+<p>Footer</p>
+</footer> -->
+<footer>
+    <p>Vehicle Management System © 2026</p>
+</footer>
+
+</div>
+
+<script type="module" src="js/people.js"></script>
+<script src="js/common.js"></script>                        
+</body>
+</html>

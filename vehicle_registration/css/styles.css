@@ -1,0 +1,113 @@
+/* Core Layout - CSS Grid */
+#container {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 1fr 4fr;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header, main, aside, footer {
+    border: 1px solid black; 
+    margin: 10px;            
+    padding: 10px;          
+    background-color: #fff;
+}
+
+header { grid-area: header; text-align: center; }
+aside { grid-area: sidebar; }
+main { grid-area: main; min-height: 400px; }
+/* footer { grid-area: footer; text-align: center; } */
+footer {
+    grid-area: footer;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    text-align: center; 
+}
+
+/* FIX: Image Scaling inside Sidebar */
+aside img {
+    max-width: 100%;  /* Prevents image from being wider than the sidebar */
+    height: auto;     /* Maintains aspect ratio so it doesn't look squished */
+    display: block;
+    margin: 0 auto;   /* Centers the image */
+}
+
+/* Navigation - CSS Flex  */
+.nav {
+    display: flex;
+    list-style-type: none; 
+    padding: 0;
+    justify-content: space-between; 
+}
+
+.nav li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    #container {
+        grid-template-areas: 
+            "header"
+            "main"
+            "sidebar" 
+            "footer";
+        grid-template-columns: 1fr;
+    }
+    
+    .nav {
+        flex-direction: column; 
+        align-items: center;
+    }
+}
+
+/* UI Details (Form & Results) */
+input {
+    display: block;
+    width: 95%;
+    padding: 8px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.result-item {
+    border: 1px dashed #666; 
+    padding: 10px;
+    margin-top: 10px;
+}
+
+/* Styling for the home page sections */
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-top: 0px;
+}
+
+.features ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.features li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.notice {
+    background-color: #f8f9fa;
+    border-left: 5px solid #caddf1;
+    padding: 10px;
+    margin-top: 30px;
+}
