@@ -56,7 +56,7 @@ checkBtn.onclick = async () => {
         btn.innerText = "Select This Owner"
         btn.onclick = () => {
             selectedOwnerId = p.personid; 
-            console.log("🚨 Step 3: Owner Selected! ID:", selectedOwnerId);
+            console.log("Step 3: Owner Selected! ID:", selectedOwnerId);
             ownerResults.innerHTML = `<strong>Selected: ${p.name}</strong>`;
         }
 
@@ -72,7 +72,7 @@ newOwnerBtn.onclick = () => {
 
 // ADD NEW OWNER
 document.getElementById("addOwner").onclick = async () => {
-    console.log("🚨 Step 4: Adding new owner to database...");
+    console.log("Step 4: Adding new owner to database...");
     const name = document.getElementById("name").value
     const address = document.getElementById("address").value
     const dob = document.getElementById("dob").value
